@@ -10,6 +10,7 @@ const message_container = document.querySelector('.message-container')
 
 crypt_btn.onclick = encrypt
 decrypt_btn.onclick = decrypt
+copy_btn.onclick = copy_text
 const rules = {
     "a": "ai",
     "e": "enter",
@@ -35,6 +36,8 @@ function encrypt() {
         }
     }
     show_result(encrypted_text)
+    crypt_btn.disabled = true
+    decrypt_btn.disabled = false
 
 }
 
@@ -49,8 +52,18 @@ function decrypt() {
             decrypted_text = decrypted_text.concat(input_text.value[i])
         }
     }
+    
     show_result(decrypted_text)
+    crypt_btn.disabled = false
+    decrypt_btn.disabled = true
 
+}
+
+function copy_text(){
+    var texto = text_result.textContent;
+    navigator.clipboard.writeText(texto).catch((err) => {
+        console.error('Error al copiar el texto: ', err);
+      });
 }
 
 function hide_elements(){
