@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles/styles.css" />
+    
+    
+    <title>Magic encrypter</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/Static/images/logo.png" alt="logo">
+    </header>
+    <main>
+      <section class="input-section">
+          <div class="textarea-container">
+            <textarea 
+              name="textarea"
+              id="text-area"
+              cols="30"
+              rows="10"
+              placeholder="Enter your text here"
+            ></textarea>
+          </div>
+          <div class="no-text-error-container hide">
+            <p>Please enter some text</p>
+          </div>
+
+          <div class="alert hide">
+            <img src="/Static/images/alert-icon.png" alt="alert icon">
+            <p>You can only use lower case and no accent tick</p>
+          </div>
+
+          <div class="btn-container">
+              <button class="btn" id="crypt-btn" >Crypt</button>
+              <button class="btn" id="decrypt-btn">Decrypt</button>
+          </div>
+      </section>
+
+      <section class="output-container">
+        <div class="silly-guy">
+          <img src="/Static/images/mono.png" alt="boy looking 4 something, idk">
+        </div>
+
+        <div class="message-container">
+          <h3>No messages found</h3>
+          <p>Enter the message you want to crypt or decrypt</p>
+        </div>
+
+        <div class="result-container hide">
+          <h1>Encrypted message: </h1>
+          <p class="text-result"></p>
+        </div>
+
+        <div class="copy-container hide">
+          <button class="btn" id="copy-btn" onclick="encrypt()">Copy text</button>
+        </div>
+
+        
+      </section>
+    </main>
+  </body>
+  
+  <!-- <script src="../../Model/Encryptor.js"></script>
+  <script src="../../Model/Main.jsDecryptor.js"></script> -->
+  <script type="module" src="../../Static/Main.js"></script>
+</html>
