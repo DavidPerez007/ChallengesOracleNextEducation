@@ -1,15 +1,15 @@
-:root{
-    --azul: #0A3871;
-    --gris: #D8DFE8;
-    --blanco: #FFFFFF;
-    --azulClaro: #F3F5FC;
-    --grisClaro: #495057;
-    --grisOscuro: #343A40;
-    --fuentePrincipal:'Inter', sans-serif;
-    font-size: 16px;
+:root {
+  --azul: #0a3871;
+  --gris: #d8dfe8;
+  --blanco: #ffffff;
+  --azulClaro: #f3f5fc;
+  --grisClaro: #495057;
+  --grisOscuro: #343a40;
+  --fuentePrincipal: "Inter", sans-serif;
+  font-size: 16px;
 }
 
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
@@ -20,19 +20,19 @@ body {
 }
 
 /* Header */
-header{
+header {
   width: 100%;
   height: 4rem;
 }
 
-.logo{
+.logo {
   margin: 0.5rem;
   width: auto;
   height: 3rem;
 }
 
 /* Main */
-main{
+main {
   display: flex;
   height: 100%;
   justify-content: space-between;
@@ -41,7 +41,7 @@ main{
 }
 
 /* section 1 */
-.textarea-container{
+.textarea-container {
   position: absolute;
   left: 5rem;
   top: 3rem;
@@ -49,29 +49,28 @@ main{
   width: 40%;
 }
 
-textarea{
+textarea {
   background-color: var(--azulClaro);
   color: var(--azul);
   cursor: pointer;
   font-size: 1.5rem;
   width: 100%;
   height: 100%;
-  border: #0A3871 solid 1px;
-
+  border: #0a3871 solid 1px;
 }
 
-textarea::placeholder{
+textarea::placeholder {
   color: var(--azul);
 }
 
-.btn-container{
+.btn-container {
   position: absolute;
   top: 60%;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.btn{
+.btn {
   width: 328px;
   height: 67px;
   border: solid 1px;
@@ -83,25 +82,42 @@ textarea::placeholder{
   cursor: pointer;
 }
 
-#crypt-btn{
+.btn:active {
+  width: 328px;
+  height: 67px;
+  border: solid 1px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-right: 1.25rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  transform: scale(1.1);
+  
+}
+
+#crypt-btn {
   background-color: var(--azul);
   color: var(--blanco);
 }
 
-#decrypt-btn{
+#crypt-btn:disabled, #decrypt-btn:disabled{
+  background-color: var(--grisClaro);
+}
+#decrypt-btn {
   background-color: var(--azulClaro);
   color: var(--azul);
 }
 
 /* section 2*/
-.message-container h3{
+.message-container h3 {
   font-size: 1.5rem;
   text-align: center;
   color: var(--grisOscuro);
   padding-top: 1rem;
 }
 
-.message-container p{
+.message-container p {
   color: var(--grisClaro);
   font-size: 1rem;
   font-weight: 400;
@@ -109,7 +125,7 @@ textarea::placeholder{
   padding-top: 1.2rem;
 }
 
-.output-container{
+.output-container {
   background-color: var(--azulClaro);
   box-sizing: border-box;
   box-shadow: 0px 24px 32px -8px var(--grisOscuro);
@@ -124,13 +140,13 @@ textarea::placeholder{
   padding: 2rem;
 }
 
-.silly-guy{
+.silly-guy {
   display: block;
   box-sizing: border-box;
   margin-bottom: 2rem; /* Agrega margen inferior para separar del siguiente elemento */
 }
 
-.message-container{
+.message-container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra el contenido horizontalmente */
@@ -138,12 +154,21 @@ textarea::placeholder{
   text-align: center;
 }
 
-.copy-container{
-  display: flex;
-  justify-content: center;
+.result-container{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-#copy-btn{
+
+.copy-container {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+#copy-btn {
   width: 80%;
   color: var(--azul);
   cursor: pointer;
@@ -155,9 +180,13 @@ textarea::placeholder{
   transition: all 0.2s ease-in-out;
 }
 
-#copy-btn:hover{
+#copy-btn:hover {
   background-color: var(--azul);
   color: white;
   transform: translateY(-2px);
   box-shadow: 0px 4px 8px -2px var(--grisOscuro);
+}
+
+.hide{
+  display: none;
 }
